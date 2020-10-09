@@ -490,6 +490,7 @@ class FormHelper
 					$groupParts = explode('.', $showOnPartBlocks[0]);
 					$field      = array_shift($groupParts) . '[' . join('][', $groupParts) . ']';
 				}
+				if ($showOnPartBlocks[0][0] === '.') $field = str_replace("[]", "", $field);
 			}
 			else
 			{
